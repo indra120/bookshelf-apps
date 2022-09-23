@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bookshelf Apps</title>
+</head>
+<body>
+    <header class="head_bar">
+        <h1 class="head_bar__title">Bookshelf Apps</h1>
+    </header>
+    <main>
+        <section class="input_section">
+            <h2>Add Book to Shelf</h2>
+            <form id="inputBook">
+                <div class="input">
+                    <label for="bookTitle">Title</label>
+                    <input id="bookTitle" type="text" required>
+                </div>
+                <div class="input">
+                    <label for="bookAuthor">Author</label>
+                    <input id="bookAuthor" type="text" required>
+                </div>
+                <div class="input">
+                    <label for="bookYear">Year</label>
+                    <input id="bookYear" type="number" required>
+                </div>
+                <div class="input_inline">
+                    <label for="bookIsComplete">Mark as Completed</label>
+                    <input id="bookIsComplete" type="checkbox">
+                </div>
+                <button id="Submit" type="submit">Add new book</button>
+            </form>
+        </section>
+    
+        <section class="search_section">
+            <h2>Search Book (by title)</h2>
+            <form id="searchBook">
+                <input id="searchBookTitle" type="text">
+                <button id="searchSubmit" type="submit">
+                    <svg width="20" height="20" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0)">
+                            <circle cx="31.5" cy="28.5" r="23.25" stroke="#FCFCFC" stroke-width="8.5"/>
+                            <line x1="65.4384" y1="69.5858" x2="46.4762" y2="46.9875" stroke="#FCFCFC" stroke-width="8.5" stroke-linecap="round"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0">
+                                <rect width="75" height="75" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+            </form>
+        </section>
+    
+        <section class="book_shelf">
+            <h2>Not Finished</h2>
+            <div id="incompleteBookshelfList" class="book_list"></div>
+        </section>
+    
+        <section class="book_shelf">
+            <h2>Already Completed</h2>
+            <div id="completeBookshelfList" class="book_list"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        app()
+    </script>
+</body>
+</html>
